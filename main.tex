@@ -1,14 +1,10 @@
 %
 %Academic CV LaTeX Template
-% Author: Dubasi Pavan Kumar
-% LinkedIn: https://www.linkedin.com/in/im-pavankumar/
+% Author: Radwan Abdullah Al-Shawesh
 % License: MIT
 %
 % For errors, suggestions, or improvements, please contact:
-% Email: pavankumard.pg19.ma@nitp.ac.in
 %
-
-
 
 \documentclass[a4paper,11pt]{article}
 
@@ -29,9 +25,10 @@
 \usepackage{fancyhdr}
 \usepackage{multicol}
 \usepackage{graphicx}
-\usepackage{cfr-lm}
 \usepackage[T1]{fontenc}
 \usepackage{fontawesome5}
+\usepackage{multirow}
+%\usepackage{cfr-lm}
 
 % Color definitions
 \definecolor{darkblue}{RGB}{0,0,139}
@@ -157,6 +154,10 @@
 \newcommand{\headerfontix}{\fontfamily{qtm}\selectfont} % Quasi-Times (another Times New Roman alternative)
 \newcommand{\headerfontx}{\fontfamily{bch}\selectfont} % Charter (clean serif font)
 
+\title{My Amazing Document}
+\author{John Doe}
+\date{\today}  % Adds the current date
+
 \begin{document}
 	\headerfontiii
 	
@@ -193,11 +194,35 @@
 	\section{\textbf{Summary}}
 	\vspace{1mm}
 	\small{
-		A passionate computer science enthusiast with a strong foundation in mathematics, computer science, software engineering, and artificial intelligence. Driven by curiosity and a strong passion for research, I am constantly exploring new ways to innovate and push the boundaries of what technology can achieve. If you're looking for someone who gets excited about breakthroughs in computer science, embracing new challenges, and turning coffee into code, then we’re on the same page!
+		A passionate computer science enthusiast with a strong foundation in mathematics, computer science, software engineering, and 
+		artificial intelligence. Driven by curiosity and a strong passion for research, I am constantly exploring new ways to innovate 
+		and push the boundaries of what technology can achieve. If you're looking for someone who gets excited about breakthroughs in computer science, 
+		embracing new challenges, and turning coffee into code, then we’re on the same page!
 	}
 	\vspace{-2mm}
 	% Summary End
 	
+	% Personal Info Start
+	\section{\textbf{Personal Info}}
+	\vspace{-2mm}
+
+	% Please add the following required packages to your document preamble:
+	% \usepackage{multirow}
+	\begin{table}[h!]
+	\centering
+    \begin{tabularx}{\textwidth}{X@{\hskip 10pt}l@{\hskip 20pt}X@{\hskip 10pt}X}
+	\textbf{Name}           & Redhwan Abdullah Thabit Al-Shawesh & \textbf{Passport No.}   & 12637074      \\
+	\textbf{Nationality}    & Yemeni                             & \textbf{Place of Issue} & Yemen, Marib  \\
+	\textbf{Gender}         & Male                               & \textbf{Date of Issue}  & 2023/08/05    \\
+	\textbf{Date of Birth}  & 12 October 1992                    & \textbf{Date of Expiry} & 05/08/2029    \\
+	\textbf{Marital Status} & Married                            & \textbf{Place of Birth} & Yemen, Sana'a \\
+	\textbf{Languages}      & English, Arabic, Chinese           & \textbf{Profession}     & Lecturer      \\
+	\end{tabularx}
+	\end{table}
+
+	\vspace{-6mm}
+	% Personal Info End
+
 	% Education Start
 	\section{\textbf{Education}}
 	\vspace{-0.4mm}
@@ -206,10 +231,12 @@
 	{East China Normal University}{Shanghai, China}
 	{\textbf{M.S.E} Software Engineering}{Sep. 2018 - July 2021}
 	\resumeItemListStart
-	\item \textbf{Specialization Topic:} Artificial Intelligence and Computer vision
+	\item \textbf{Specialization Topic:} Artificial Intelligence, Deep learning, Medical Big Data, and Computer Vision.
 	\item \textbf{MSc Thesis:} Histopathological Colorectal Cancer Image Classification based on Convolutional Neural Network
 	\item \textbf{Supervisor:} Prof. Chen YiXiang
 	\item \textbf{GPA:} 4.21/5.00
+	\item \textbf{Awards:} Shanghai Goverment Scholarship Type A
+	\item \textbf{Relevant Coursework:} Computer Architecture, Algorithm Design and Complexity Analysis, Fundamentals of Artificial Intelligence, Data Visualization, Theoretical Foundation of Software, Software/Hardware Co-Design, Machine learning, Large-Scale Nonlinear Programming, Advanced Design Methodologies for Smart Systems, Seminar on Embedded Systems.
 	\resumeItemListEnd
 	
 	\resumeSubheading
@@ -229,6 +256,8 @@
 	\resumeSubHeadingListEnd
 	\vspace{-6mm}
 	
+	% Education Ends
+
 	\section{\textbf{Experience}}
 	\vspace{-0.4mm}
 	\resumeSubHeadingListStart
@@ -283,12 +312,12 @@
 	
 	\resumeSubHeadingListEnd
 	
-	\section{\textbf{Patents and Publications} \hfill \textcolor{darkblue}{\scriptsize C=Conference, J=Journal, P=Patent, S=In Submission, T=Thesis}}
+	\section{\textbf{Patents and Publications} \hspace*{\fill} \textcolor{darkblue}{\scriptsize C=Conference, J=Journal, P=Patent, S=In Submission, T=Thesis}}
 	\vspace{0.2mm}
 	\small{
-		\begin{enumerate}[leftmargin=*, labelsep=0.5em, align=left, widest={[\textbf{S.1}]}, itemindent=0em, label={\textbf{[\arabic*]}]}]
+		\begin{enumerate}[leftmargin=*, labelsep=0.5em, align=left, widest={[\textbf{S.1}]}, itemindent=0em, label={\textbf{[\arabic*]}}]
 			\item[\textbf{[C.1]}] Your Name, et al. (Year). \href{https://doi.org/XX.XXXX/XXXXXXX.XXXX.XXXXXXX}{\textbf{Title of Conference Paper}}. In \textit{Name of Conference Proceedings}, pp. XX-XX. Publisher. Date, Location. DOI: XX.XXXX/XXXXXXX.XXXX.XXXXXXX
-			
+
 			\item[\textbf{[S.1]}] Your Name, et al. (Year). \textbf{Title of Submitted Paper}. Manuscript submitted for publication in \textit{Journal Name}.
 			
 			\item[\textbf{[P.1]}] Inventor 1, Your Name, Inventor 3, et al. (Year). \href{https://patentoffice.gov/patent/XXXXXXXXX}{\textbf{Title of Patent}}. Patent Office, Patent No. XXXXXXXXX. Registration Date: Date, Grant Date: Date, Publication Date: Date.
