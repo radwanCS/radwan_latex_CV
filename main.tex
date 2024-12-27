@@ -8,7 +8,10 @@
 
 \documentclass[a4paper,11pt]{article}
 
-% Package imports
+% Custom Packages
+\usepackage{CJKutf8}
+
+% Template Package imports
 \usepackage{latexsym}
 \usepackage{xcolor}
 \usepackage{float}
@@ -29,8 +32,8 @@
 \usepackage{fontawesome5}
 \usepackage{multirow}
 \usepackage{comment}
-
 %\usepackage{cfr-lm}
+
 
 % Color definitions
 \definecolor{darkblue}{RGB}{0,0,139}
@@ -155,6 +158,11 @@
 \newcommand{\headerfontviii}{\fontfamily{qpl}\selectfont} % Quasi-Palatino (another elegant serif option)
 \newcommand{\headerfontix}{\fontfamily{qtm}\selectfont} % Quasi-Times (another Times New Roman alternative)
 \newcommand{\headerfontx}{\fontfamily{bch}\selectfont} % Charter (clean serif font)
+
+% Custom Commands
+\newcommand{\chinese}[1]{\begin{CJK}{UTF8}{gbsn}#1\end{CJK}} % Normal Chinese Font
+\newcommand{\chinesebf}[1]{{\renewcommand{\bfdefault}{bx}\begin{CJK}{UTF8}{gbsn}\textbf{#1}\end{CJK}}} % Bold Chinese
+
 
 \title{My Amazing Document}
 \author{John Doe}
@@ -367,37 +375,10 @@
         \item Designed the software to operate efficiently on both CPU and GPU, without requiring high-end hardware or third-party software dependencies.
         \item Optimized the user interface for simplicity, allowing pathologists and lab doctors to upload, classify, and analyze images efficiently.
     \resumeItemListEnd
-
-
-	\resumeProject
-	{Project A: [Brief Description]}
-	{Tools: [List of tools and technologies used]}
-	{Month Year - Month Year}
-	{{}[\href{https://github.com/your-username/project-a}{\textcolor{darkblue}{\faGithub}}]}
-	\resumeItemListStart
-	\item Developed [specific feature/system] for [specific purpose]
-	\item Implemented [specific technology] for [specific goal], achieving [specific result]
-	\item Created [specific component], ensuring [specific benefit]
-	\item Applied [specific method] to analyze [specific aspect]
-	\resumeItemListEnd
-	
-
-
-	\resumeProject
-	{Project B: [Brief Description]}
-	{Tools: [List of tools and technologies used]}
-	{Month Year}
-	{{}[\href{https://github.com/your-username/project-b}{\textcolor{darkblue}{\faGithub}}]}
-	\resumeItemListStart
-	\item Developed [specific model/system], achieving [specific metric]
-	\item Implemented [specific feature], processing [specific volume] of data
-	\item Created [specific visualization] for [specific purpose]
-	\item Developed [specific component] for easy integration with [specific system]
-	\resumeItemListEnd
 	
 	\resumeSubHeadingListEnd
 	
-	\section{\textbf{Patents and Publications} \hspace*{\fill} \textcolor{darkblue}{\scriptsize C=Conference, J=Journal, P=Patent, S=In Submission, T=Thesis}}
+	\section{\textbf{Patents and Publications} \hspace*{\fill} \textcolor{darkblue}{\scriptsize C=Conference, J=Journal, P=Patent, R=Preprint, S=In Submission, T=Thesis}}
 	\vspace{0.2mm}
 	\small{
 		\begin{enumerate}[leftmargin=*, labelsep=0.5em, align=left, widest={[\textbf{S.1}]}, itemindent=0em, label={\textbf{[\arabic*]}}]
@@ -484,7 +465,7 @@
 	{Certificate of Honor}
 	{Tongji University}
 	{June 2012}
-	{{}[\href{https://1drv.ms/b/c/0b66680558f854cf/EdAygWujlQVKuntlVSHtJRIBFWMyYy7UMJXhswPmx3oSWQ?e=DeIXG7}{\textcolor{darkblue}{\faIcon{globe}}}]}
+	{{}[\href{https://1drv.ms/b/c/0b66680558f854cf/EdAygWujlQVKuntlVSHtJRIBFWMyYy7UMJXhswPmx3oSWQ?e=Y1Aupf}{\textcolor{darkblue}{\faIcon{globe}}}]}
 	\resumeItemListStart
 	\item Won the Outstanding Academic Achievement Award, Excellent Attendance Award, and Active Participation in Various Activities Award.
 	\resumeItemListEnd
@@ -526,26 +507,16 @@
 	\section{\textbf{Volunteer Experience}}
 	\vspace{-0.4mm}
 	\resumeSubHeadingListStart
+
 	\resumeProject
-	{Volunteer Role A}
-	{Organization Name}
-	{Month Year - Month Year}
-	{{}[\href{https://volunteer-org-a-link.com}{\textcolor{darkblue}{\faIcon{globe}}}]}
+	{Volunteer Teaching}
+	{Gansu Province - Baiying city - Hepan Junior High School}
+	{June 2015 - July 2015}
+	{{}[\href{https://1drv.ms/b/c/0b66680558f854cf/EWhZisbqvTNClGJQgjoSEg8BX4o5KTUrmbUno6iK2k-XtA?e=4Ugpkl}{\textcolor{darkblue}{\faIcon{globe}}}]}
 	\resumeItemListStart
-	\item Key responsibility or contribution in this role
-	\item Impact of your volunteer work
-	\item Skills developed or applied during this experience
-	\resumeItemListEnd
-	
-	\resumeProject
-	{Volunteer Role B}
-	{Organization Name}
-	{Month Year - Present}
-	{{}[\href{https://volunteer-org-b-link.com}{\textcolor{darkblue}{\faIcon{globe}}}]}
-	\resumeItemListStart
-	\item Key responsibility or contribution in this role
-	\item Impact of your volunteer work
-	\item Skills developed or applied during this experience
+	\item Taught science in English to junior high school students during a 15-day volunteer teaching and cultural exchange program.
+	\item Promoted cross-cultural understanding and improved students' English communication skills through interactive science lessons.
+	\item Recognized as an NUAA Advanced Individual of Summer Social Practice for contributions to education and community development.
 	\resumeItemListEnd
 	
 	\resumeSubHeadingListEnd
@@ -588,10 +559,24 @@
 
 	\section{\textbf{Additional Information}}
 	\vspace{-0.4mm}
+
 	\small{
-		\textbf{Languages:} Language A (Proficiency level), Language B (Proficiency level), Language C (Proficiency level)
-		
-		\textbf{Interests:} Interest 1, Interest 2, Interest 3, Interest 4
+    \textbf{Languages:} 
+    \begin{itemize}[leftmargin=*]
+        \item \textbf{Arabic:} Native speaker.
+		\item \textbf{English:} Fluent in reading, writing, and listening, with average speaking skills. Completed a bachelor's program taught in English and published academic papers in English. My primary, middle, and high school education was primarily in English.
+		\item \textbf{Chinese:} Passed HSK Level 6, the highest language proficiency certification in Chinese.
+    \end{itemize}
+
+	\textbf{Research Interests:} 
+	\begin{itemize}[leftmargin=*]
+		\item Artificial Intelligence (AI) and its applications in healthcare, robotics, and automation
+		\item Machine Learning (ML), Deep Learning (DL), and Reinforcement Learning (RL) techniques
+		\item Convolutional Neural Networks (CNNs) and Computer Vision for image recognition and processing
+		\item Natural Language Processing (NLP) and its impact on language models and chatbots
+		\item Algorithm design, optimization, and computational complexity
+		\item Autonomous systems, robotics, and intelligent agents
+	\end{itemize}
 	}
 	\vspace{-4mm}
 	
@@ -599,26 +584,33 @@
 	\vspace{-0.2mm}
 	\small{
 		\begin{enumerate}[leftmargin=*,labelsep=2mm]
-			\item \textbf{Reference Person 1}\\
-			Job Title, Department\\
-			Organization/Institution Name\\
-			Email: email1@example.com\\
-			Phone: +X-XXX-XXX-XXXX\\
-			\textit{Relationship: [e.g., Thesis Advisor, Manager, etc.]}
+
+			\item \textbf{Professor Chen YiXiang (\chinesebf{陈仪香}) [\href{https://1drv.ms/b/c/0b66680558f854cf/EbFpHDKA10FGiAizXAOuDJYBzRX9TGkOwxiMgaOED5dEIg?e=70cLSA}{\faIcon{globe}}]}\\
+			Professor, College of Software Engineering\\
+			East China Normal University\\
+			Email: yxchen@sei.ecnu.edu.cn\\
+			Phone: +86-186-2181-5769\\
+			\textit{Relationship: Master's Degree Academic Advisor}
+
+			\item \textbf{Prof. (Dr) Wang Wei Ying [\href{https://1drv.ms/b/c/0b66680558f854cf/EbFH8uGW5ThBq6ndiB9DKYsBhIrjYMmULQglMyAETwtpag?e=UX86MS}{\faIcon{globe}}]}\\
+			Professor, Department of Engineering\\
+			Nanjing University of Aeronautical \& Astronautical Engineering\\
+			Email: meewywang@nuaa.edu.cn\\
+			Phone: +86-138-5151-4220\\
+			\textit{Relationship: Head Supervisor during a Design Project}
 			
-			\item \textbf{Reference Person 2}\\
-			Job Title, Department\\
-			Organization/Institution Name\\
-			Email: email2@example.com\\
-			Phone: +X-XXX-XXX-XXXX\\
-			\textit{Relationship: [e.g., Project Supervisor, Colleague, etc.]}
+			\item \textbf{Prof. (Dr) Qian Yan (\chinesebf{钱焱}) [\href{https://1drv.ms/b/c/0b66680558f854cf/Eam0QZt12EVDuapdewUNDsEBnJfOx8l1ClQttWsvVWATNA?e=PW8Ogm}{\faIcon{globe}}]}\\
+			Professor, Department of Business Administration\\
+			Nanjing University of Aeronautical \& Astronautical Engineering\\
+			Phone: +86-25-8489-6220\\
+			\textit{Relationship: Instructor}
 			
-			\item \textbf{Reference Person 3}\\
-			Job Title, Department\\
-			Organization/Institution Name\\
-			Email: email3@example.com\\
-			Phone: +X-XXX-XXX-XXXX\\
-			\textit{Relationship: [e.g., Mentor, Collaborator, etc.]}
+			\item \textbf{Dr. Li Ting (\chinesebf{李挺}) [\href{https://1drv.ms/b/c/0b66680558f854cf/Ee6VsE2GSOxNoGe7cg1dnhoBg1g6GVJuUYOy9DL94XeAVQ?e=dmdVsT}{\faIcon{globe}}]}\\
+			Head Teacher, Department of International Cultural Exchange\\
+			Tongji University\\
+			Email: liting0811@126.com\\
+			Phone: +86-138-1838-5961\\
+			\textit{Relationship: Head teacher}
 		\end{enumerate}
 	}
 	
