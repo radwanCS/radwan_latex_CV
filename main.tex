@@ -10,6 +10,7 @@
 
 % Custom Packages
 \usepackage{CJKutf8}
+\usepackage[table,xcdraw]{xcolor}
 
 % Template Package imports
 \usepackage{latexsym}
@@ -215,27 +216,19 @@
 	% Summary End
 	
 	% Personal Info Start
-	\section{\textbf{Personal Info}}
-	\vspace{-2mm}
-
-	% Please add the following required packages to your document preamble:
-	% \usepackage{multirow}
-
-	\begin{table}[h!]
-		\centering
-		\footnotesize{
-		\begin{tabularx}{\textwidth}{X@{\hskip 10pt}l@{\hskip 20pt}X@{\hskip 10pt}X}
-		\textbf{Name}           & Redhwan Abdullah Thabit Al-Shawesh & \textbf{Passport No.}   & 12637074      \\
-		\textbf{Nationality}    & Yemeni                             & \textbf{Place of Issue} & Yemen, Marib  \\
-		\textbf{Gender}         & Male                               & \textbf{Date of Issue}  & 2023/08/05    \\
-		\textbf{Date of Birth}  & 12 October 1992                    & \textbf{Date of Expiry} & 05/08/2029    \\
-		\textbf{Marital Status} & Married                            & \textbf{Place of Birth} & Yemen, Sana'a \\
-		\textbf{Languages}      & English, Arabic, Chinese           & \textbf{Profession}     & Lecturer      \\
-		\end{tabularx}
-		}
-	\end{table}
+	\section{\textbf{Personal Information}}
+	\vspace{2mm}
 	
-	\vspace{-6mm}
+	\footnotesize{
+	\centering
+	\begin{tabularx}{\textwidth}{X@{\hskip 10pt}l@{\hskip 20pt}X@{\hskip 10pt}X}
+		\textbf{Name}           & Redhwan Abdullah Thabit Al-Shawesh   & \textbf{Marital Status} & Married \\
+		\textbf{Nationality}    & Yemeni                               & \textbf{Place of Birth} & Sana'a, Yemen \\
+		\textbf{Gender}         & Male                                 & \textbf{Languages}      & English, Arabic, Chinese \\
+		\textbf{Date of Birth}  & 12 October 1992                      & \textbf{Profession}     & Lecturer \\
+	\end{tabularx}
+	}
+	\vspace{-4mm}
 	% Personal Info End
 
 	% Education Start
@@ -288,8 +281,252 @@
 	\vspace{-6mm}
 	% Education Ends
 
+	% Research Interests Starts
+	\section{\textbf{Research Interests}}
+	\vspace{2mm} % Adjust spacing for clarity
+
+	\begingroup
+	\footnotesize{
+	% Set the table layout for two-column alignment
+	\renewcommand{\arraystretch}{1.4} % Adjusts row height for readability
+	\setlength{\tabcolsep}{10pt} % Adjusts horizontal spacing between columns
+
+	\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}X}
+	\textbullet\ Machine Learning and Deep Learning & \textbullet\ Computer Vision \\
+	\textbullet\ Natural Language Processing (NLP) & \textbullet\ Reinforcement Learning (RL) \\
+	\textbullet\ AI Applications in Healthcare & \textbullet\ Medical Big Data\\
+	\textbullet\ Computer Architecture and Software System Design & \textbullet\ Autonomous Systems and Robotics\\
+	\end{tabularx}
+	}
+	\endgroup
+	\vspace{-2mm} % Add spacing for section balance
+	% Research Interests Ends
+
+	% Research Experience Start
+	\section{\textbf{Research Experience}}
+	\vspace{-0.4mm}
+	\resumeSubHeadingListStart
+	
+	\resumeProject
+	{Enhancing Histopathological CRC Image Classification by using CNN}
+	{Tools: [Python, TensorFlow, Keras, ResNet-50, Transfer Learning, Fine-Tuning, Macenko Method]}
+	{Sep. 2020 - March 2021}
+	{{}[\href{https://github.com/radwanCS/ResNet_50_enhanced_for_CRC_image_classification}{\textcolor{darkblue}{\faGlobe}}]}
+	\resumeItemListStart
+	\item \textbf{Institution:} East China Normal University.
+	\item \textbf{Objective:} Investigated convolutional neural network (CNN) techniques for improving colorectal cancer (CRC) histopathological image classification.
+	\item \textbf{Methods:} Adapted the ResNet-50 architecture using transfer learning and fine-tuning techniques. Leveraged pretraining on the ImageNet dataset, froze parameters in early layers, and retrained the dense and final layers to optimize feature extraction from CRC histopathological images in the NCT dataset.
+    \item \textbf{Outcomes:} Achieved a \textbf{97.7\%} validation accuracy, demonstrating the model's potential for clinical applications in cancer diagnostics.
+	\resumeItemListEnd
+	
+	\resumeSubHeadingListEnd
+	\vspace{-6mm}
+	% Research Experience End
+
+	% Teaching Experience Starts
+	\section{\textbf{Teaching Experience}}
+	\vspace{2mm} % Increased space for better clarity
+	
+	\footnotesize{
+	\textbullet\ {\normalsize{\textbf{Courses I have taught:}}}\\
+	\vspace{2mm} % Increased space for better readability
+
+	Teaching experience includes \textbf{1 year} at the University of Science \& Technology \textbf{(UST)}.
+
+	\vspace{2mm} % Increased space for better readability
+	\renewcommand{\arraystretch}{1.5} % Adjusts row height for readability
+	\setlength{\tabcolsep}{12pt} % Increased horizontal space for clarity
+	\rowcolors{2}{gray!10}{white} % Alternate row colors (2nd row gray, others white)
+	\begin{tabularx}{\textwidth}{|X|c|c|c|}
+		\hline
+		\rowcolor[HTML]{CCCCCC} % Gray background for header
+		\textbf{Course Title} & \textbf{Program} & \textbf{Semesters Taught} & \textbf{Mod of Teaching} \\
+		\hline
+		Computer Fundamentals & BSc & 1 & Lectures \& Lab\\
+		\hline
+		Computer Organization \& Architecture & BSc & 1 & Lab\\
+		\hline
+		Introduction to Computer Science & BSc & 1 & Lectures \& Lab\\
+		\hline
+		Software Engineering & BSc & 1 & Lecturers \& Lab\\
+		\hline
+	\end{tabularx}
+	
+	\vspace{4mm} % Increased space after table for balance
+	
+	\textbullet\ {\normalsize{\textbf{Additional Courses I Can Teach:}}}\\
+	\vspace{2mm} % Increased space for better readability
+
+	\renewcommand{\arraystretch}{1.5} % Adjust row height for better readability
+	\setlength{\tabcolsep}{12pt} % Adjust column spacing
+	\rowcolors{2}{gray!10}{white} % Alternate row colors (2nd row gray, others white)
+	\begin{tabularx}{\textwidth}{|X|c|}
+		\hline
+		\rowcolor[HTML]{CCCCCC} % Gray background for header
+		\textbf{Course Title} & \textbf{Teaching Readiness} \\
+		\hline
+		Calculus 1, 2, 3 & Intermediate\\
+		\hline
+		Computer Programming (C/C++, Java, Python) & Expert\\
+		\hline
+		Data Structures & Expert\\
+		\hline
+		Discrete Mathematics & Introductory\\
+		\hline
+		Digital Logic Design & Introductory\\
+		\hline
+		Introduction to Information Science \& Technology & Expert\\
+		\hline
+		Linear Algebra & Introductory\\
+		\hline
+		Object-Oriented Programming & Intermediate\\
+		\hline
+		Precalculus & Expert\\
+		\hline
+		System Analysis \& Design & Introductory\\
+		\hline
+		Web Development & Intermediate\\
+		\hline
+	\end{tabularx}
+
+	\vspace{2mm} % Consistent space before closing section
+	}
+	% Teaching Experience Ends
+
+	% Projects Section Starts
+	\section{\textbf{Projects}}
+	\vspace{-0.4mm}
+	\resumeSubHeadingListStart
+	
+	\resumeProject
+	{Deep learning: [Histopathological Image Classification by Using CNN]}
+	{Tools: [Python, TensorFlow, Keras, ResNet-50, Transfer Learning, Fine-Tuning, Macenko Method]}
+	{Sep. 2020 - March 2021}
+	{{}[\href{https://github.com/radwanCS/ResNet_50_enhanced_for_CRC_image_classification}{\textcolor{darkblue}{\faGithub}}]}
+	\resumeItemListStart
+	\item Adapted the ResNet-50 model to classify histopathological colorectal cancer (CRC) images.
+	\item Utilized transfer learning and fine-tuning techniques to achieve state-of-the-art validation accuracy of 97.7\%.
+	\item Preprocessed the datasets by applying color normalization with the Macenko method to enhance consistency.
+	\resumeItemListEnd
+	
+	\resumeProject
+    {AI Pathologist: [Image Classification Python Applicaion for Lab Doctors]}
+    {Tools: [Python, Qt for Python]}
+    {March 2021 - April 2021}
+	{{}[\href{https://github.com/radwanCS/ResNet_50_enhanced_for_CRC_image_classification}{\textcolor{darkblue}{\faGithub}}]}
+    \resumeItemListStart
+        \item Developed a software program to utilize my own CNN network.
+        \item Designed the software to operate efficiently on both CPU and GPU, without requiring high-end hardware or third-party software dependencies.
+        \item Optimized the user interface for simplicity, allowing pathologists and lab doctors to upload, classify, and analyze images efficiently.
+    \resumeItemListEnd
+	\resumeSubHeadingListEnd
+	% Projects Section Ends
+
+	\section{\textbf{Patents and Publications} \hspace*{\fill} \textcolor{darkblue}{\scriptsize C=Conference, J=Journal, P=Patent, S=In Submission, T=Thesis}}
+	\vspace{0.2mm}
+	\small{
+		\begin{enumerate}[leftmargin=*, labelsep=0.5em, align=left, widest={[\textbf{S.1}]}, itemindent=0em, label={\textbf{[\arabic*]}}]
+			
+			\item[\textbf{[C.1]}] Your Name, et al. (Year). \href{https://doi.org/XX.XXXX/XXXXXXX.XXXX.XXXXXXX}{\textbf{Title of Conference Paper}}. In \textit{Name of Conference Proceedings}, pp. XX-XX. Publisher. Date, Location. DOI: XX.XXXX/XXXXXXX.XXXX.XXXXXXX
+
+			\item[\textbf{[S.1]}] Your Name, et al. (Year). \textbf{Title of Submitted Paper}. Manuscript submitted for publication in \textit{Journal Name}.
+			
+			\item[\textbf{[P.1]}] Inventor 1, Your Name, Inventor 3, et al. (Year). \href{https://patentoffice.gov/patent/XXXXXXXXX}{\textbf{Title of Patent}}. Patent Office, Patent No. XXXXXXXXX. Registration Date: Date, Grant Date: Date, Publication Date: Date.
+			
+			\item[\textbf{[J.1]}] Author 1, Your Name, Author 3, et al. (Year). \href{https://doi.org/XX.XXXX/XXXXX.XXXX.XXXXXXX}{\textbf{Title of Journal Article}}. \textit{Journal Name}, Vol. XX, Issue X, pp. XXX-XXX. DOI: XX.XXXX/XXXXX.XXXX.XXXXXXX
+		\end{enumerate}
+	}
+		
+	% Honors and Awards Starts
+	\section{\textbf{Honors and Awards}}
+	\vspace{-0.4mm}
+	\resumeSubHeadingListStart
+		
+	\resumeProject
+	{Shanghai Goverment Scholarship Type A}
+	{East China Normal University}
+	{Sep. 2018}
+	{{}[\href{https://www.study-shanghai.cn/c.asp?action=AS_SS_Entry}{\textcolor{darkblue}{\faIcon{globe}}}]}
+	\resumeItemListStart
+		\item Awarded this scholarship to pursue a Master’s degree in Software Engineering.
+		\item Successfully completed a three year master degree at ECNU.
+	\resumeItemListEnd
+	
+	\resumeProject
+		{China Goverment Scholarship Type A}
+		{Embassy of China in Yemen}
+		{Sep. 2011}
+		{{}[\href{https://www.csc.edu.cn/studyinchina/}{\textcolor{darkblue}{\faIcon{globe}}}]}
+	\resumeItemListStart
+		\item Awarded this scholarship to pursue a bachelor degree.
+		\item Successfully completed a one-year preparatory course at Tongji University.
+		\item Successfully completed a four-year bachelor's degree at NUAA.
+	\resumeItemListEnd
+		
+	\resumeProject
+		{China Goverment Scholarship Type A}
+		{Embassy of China in Yemen}
+		{Sep. 2016}
+		{{}[\href{https://www.csc.edu.cn/studyinchina/}{\textcolor{darkblue}{\faIcon{globe}}}]}
+	\resumeItemListStart
+		\item Awarded this scholarship to pursue a Master's degree in Chinese Language.
+		\item Successfully completed a three-year master degree at SEU.
+	\resumeItemListEnd
+	
+	\resumeProject
+		{Top 100 Students Award}
+		{Nanjing University of Aeronautical \& Astronautical Engineering}
+		{Sep. 2015}
+		{{}[\href{https://1drv.ms/b/c/0b66680558f854cf/EZs7uU2FlwhBtqCXhEjKeBwBNxDvedaqIt2Cz2pGCuhbpQ?e=u5CROZ}{\textcolor{darkblue}{\faIcon{globe}}}]}
+	\resumeItemListStart
+		\item This award was given for excellence in academic performance, recognizing me as one of the top 100 students in the university during the 2015-2016 academic year.
+	\resumeItemListEnd
+	
+	\resumeProject
+		{Certificate of Honor}
+		{Tongji University}
+		{June 2012}
+		{{}[\href{https://1drv.ms/b/c/0b66680558f854cf/EdAygWujlQVKuntlVSHtJRIBFWMyYy7UMJXhswPmx3oSWQ?e=Y1Aupf}{\textcolor{darkblue}{\faIcon{globe}}}]}
+	\resumeItemListStart
+		\item Won the Outstanding Academic Achievement Award, Excellent Attendance Award, and Active Participation in Various Activities Award.
+	\resumeItemListEnd
+	
+	\resumeSubHeadingListEnd
+	\vspace{-6mm}
+	% Honors and Awards End
+
+	\begin{comment}
+	\section{\textbf{Leadership Experience}}
+	\vspace{-0.4mm}
+	\resumeSubHeadingListStart
+	\resumeProject
+	{Leadership Role A}
+	{Organization/Institution Name}
+	{Month Year - Month Year}
+	{{}[\href{https://organization-a-link.com}{\textcolor{darkblue}{\faIcon{globe}}}]}
+	\resumeItemListStart
+	\item Key responsibility or achievement in this role
+	\item Quantifiable impact or improvement made during tenure
+	\item Initiative taken or project led
+	\resumeItemListEnd
+	
+	\resumeProject
+	{Leadership Role B}
+	{Organization/Institution Name}
+	{Month Year - Month Year}
+	{{}[\href{https://organization-b-link.com}{\textcolor{darkblue}{\faIcon{globe}}}]}
+	\resumeItemListStart
+	\item Key responsibility or achievement in this role
+	\item Quantifiable impact or improvement made during tenure
+	\item Initiative taken or project led
+	\resumeItemListEnd
+	
+	\resumeSubHeadingListEnd
+	\vspace{-6mm}
+	\end{comment}
+
 	% Experience Starts
-	\section{\textbf{Experience}}
+	\section{\textbf{Employment History}}
 	\vspace{2mm}
 
 	\resumeSubHeadingListStart
@@ -349,161 +586,6 @@
 	\vspace{-6mm}
 	% Experience Ends
 
-	% Projects Starts
-	\section{\textbf{Projects}}
-	\vspace{-0.4mm}
-	\resumeSubHeadingListStart
-	
-	\resumeProject
-	{Deep learning: [Histopathological Image Classification by Using CNN]}
-	{Tools: [Python, TensorFlow, Keras, ResNet-50, Transfer Learning, Fine-Tuning, Macenko Method]}
-	{Sep. 2020 - March 2021}
-	{{}[\href{https://github.com/radwanCS/ResNet_50_enhanced_for_CRC_image_classification}{\textcolor{darkblue}{\faGithub}}]}
-	\resumeItemListStart
-	\item Adapted the ResNet-50 model to classify histopathological colorectal cancer (CRC) images.
-	\item Utilized transfer learning and fine-tuning techniques to achieve state-of-the-art validation accuracy of 97.7\%.
-	\item Preprocessed the datasets by applying color normalization with the Macenko method to enhance consistency.
-	\resumeItemListEnd
-	
-	\resumeProject
-    {AI Pathologist: [Image Classification Python Applicaion for Lab Doctors]}
-    {Tools: [Python, Qt for Python]}
-    {March 2021 - April 2021}
-	{{}[\href{https://github.com/radwanCS/ResNet_50_enhanced_for_CRC_image_classification}{\textcolor{darkblue}{\faGithub}}]}
-    \resumeItemListStart
-        \item Developed a software program to utilize my own CNN network.
-        \item Designed the software to operate efficiently on both CPU and GPU, without requiring high-end hardware or third-party software dependencies.
-        \item Optimized the user interface for simplicity, allowing pathologists and lab doctors to upload, classify, and analyze images efficiently.
-    \resumeItemListEnd
-	
-	\resumeSubHeadingListEnd
-	
-	\section{\textbf{Patents and Publications} \hspace*{\fill} \textcolor{darkblue}{\scriptsize C=Conference, J=Journal, P=Patent, R=Preprint, S=In Submission, T=Thesis}}
-	\vspace{0.2mm}
-	\small{
-		\begin{enumerate}[leftmargin=*, labelsep=0.5em, align=left, widest={[\textbf{S.1}]}, itemindent=0em, label={\textbf{[\arabic*]}}]
-			\item[\textbf{[C.1]}] Your Name, et al. (Year). \href{https://doi.org/XX.XXXX/XXXXXXX.XXXX.XXXXXXX}{\textbf{Title of Conference Paper}}. In \textit{Name of Conference Proceedings}, pp. XX-XX. Publisher. Date, Location. DOI: XX.XXXX/XXXXXXX.XXXX.XXXXXXX
-
-			\item[\textbf{[S.1]}] Your Name, et al. (Year). \textbf{Title of Submitted Paper}. Manuscript submitted for publication in \textit{Journal Name}.
-			
-			\item[\textbf{[P.1]}] Inventor 1, Your Name, Inventor 3, et al. (Year). \href{https://patentoffice.gov/patent/XXXXXXXXX}{\textbf{Title of Patent}}. Patent Office, Patent No. XXXXXXXXX. Registration Date: Date, Grant Date: Date, Publication Date: Date.
-			
-			\item[\textbf{[J.1]}] Author 1, Your Name, Author 3, et al. (Year). \href{https://doi.org/XX.XXXX/XXXXX.XXXX.XXXXXXX}{\textbf{Title of Journal Article}}. \textit{Journal Name}, Vol. XX, Issue X, pp. XXX-XXX. DOI: XX.XXXX/XXXXX.XXXX.XXXXXXX
-		\end{enumerate}
-	}
-	
-	\section{\textbf{Skills}}
-	\vspace{-0.4mm}
-	\resumeHeadingSkillStart
-	\resumeSubItem{Programming Languages:}
-	{Language 1, Language 2, Language 3, Language 4, Language 5}
-	\resumeSubItem{Web Technologies:}
-	{Technology 1, Technology 2, Technology 3, Technology 4, Technology 5}
-	\resumeSubItem{Database Systems:}
-	{Database 1, Database 2, Database 3}
-	\resumeSubItem{Data Science \& Machine Learning:}
-	{Tool 1, Tool 2, Tool 3, Tool 4, Tool 5, Tool 6}
-	\resumeSubItem{Cloud Technologies:}
-	{Cloud Platform 1, Cloud Platform 2, Cloud Platform 3}
-	\resumeSubItem{DevOps \& Version Control:}
-	{Tool 1, Tool 2, Tool 3, Tool 4, Tool 5}
-	\resumeSubItem{Specialized Area:}
-	{Skill 1, Skill 2, Skill 3, Skill 4}
-	\resumeSubItem{Mathematical \& Statistical Tools:}
-	{Tool 1, Tool 2, Tool 3, Tool 4, Tool 5}
-	\resumeSubItem{Other Tools \& Technologies:}
-	{Tool 1, Tool 2, Tool 3, Tool 4, Tool 5}
-	\resumeSubItem{Research Skills:}{Skill 1, Skill 2, Skill 3, Skill 4, Skill 5, Skill 6}
-	\resumeHeadingSkillEnd
-	
-	% Honors and Awards Starts
-	\section{\textbf{Honors and Awards}}
-	\vspace{-0.4mm}
-	\resumeSubHeadingListStart
-	
-	\resumeProject
-	{Shanghai Goverment Scholarship Type A}
-	{East China Normal University}
-	{Sep. 2018}
-	{{}[\href{https://www.study-shanghai.cn/c.asp?action=AS_SS_Entry}{\textcolor{darkblue}{\faIcon{globe}}}]}
-	\resumeItemListStart
-	\item Awarded this scholarship to pursue a Master’s degree in Software Engineering.
-	\item Successfully completed a three year master degree at ECNU.
-	\resumeItemListEnd
-
-	\resumeProject
-	{China Goverment Scholarship Type A}
-	{Embassy of China in Yemen}
-	{Sep. 2011}
-	{{}[\href{https://www.csc.edu.cn/studyinchina/}{\textcolor{darkblue}{\faIcon{globe}}}]}
-	\resumeItemListStart
-	\item Awarded this scholarship to pursue a bachelor degree.
-	\item Successfully completed a one-year preparatory course at Tongji University.
-	\item Successfully completed a four-year bachelor's degree at NUAA.
-	\resumeItemListEnd
-	
-	\resumeProject
-	{China Goverment Scholarship Type A}
-	{Embassy of China in Yemen}
-	{Sep. 2016}
-	{{}[\href{https://www.csc.edu.cn/studyinchina/}{\textcolor{darkblue}{\faIcon{globe}}}]}
-	\resumeItemListStart
-	\item Awarded this scholarship to pursue a Master's degree in Chinese Language.
-	\item Successfully completed a three-year master degree at SEU.
-	\resumeItemListEnd
-
-	\resumeProject
-	{Top 100 Students Award}
-	{Nanjing University of Aeronautical \& Astronautical Engineering}
-	{Sep. 2015}
-	{{}[\href{https://1drv.ms/b/c/0b66680558f854cf/EZs7uU2FlwhBtqCXhEjKeBwBNxDvedaqIt2Cz2pGCuhbpQ?e=u5CROZ}{\textcolor{darkblue}{\faIcon{globe}}}]}
-	\resumeItemListStart
-	\item This award was given for excellence in academic performance, recognizing me as one of the top 100 students in the university during the 2015-2016 academic year.
-	\resumeItemListEnd
-
-	\resumeProject
-	{Certificate of Honor}
-	{Tongji University}
-	{June 2012}
-	{{}[\href{https://1drv.ms/b/c/0b66680558f854cf/EdAygWujlQVKuntlVSHtJRIBFWMyYy7UMJXhswPmx3oSWQ?e=Y1Aupf}{\textcolor{darkblue}{\faIcon{globe}}}]}
-	\resumeItemListStart
-	\item Won the Outstanding Academic Achievement Award, Excellent Attendance Award, and Active Participation in Various Activities Award.
-	\resumeItemListEnd
-
-	\resumeSubHeadingListEnd
-	% Honors and Awards End
-	\vspace{-6mm}
-
-	\begin{comment}
-	\section{\textbf{Leadership Experience}}
-	\vspace{-0.4mm}
-	\resumeSubHeadingListStart
-	\resumeProject
-	{Leadership Role A}
-	{Organization/Institution Name}
-	{Month Year - Month Year}
-	{{}[\href{https://organization-a-link.com}{\textcolor{darkblue}{\faIcon{globe}}}]}
-	\resumeItemListStart
-	\item Key responsibility or achievement in this role
-	\item Quantifiable impact or improvement made during tenure
-	\item Initiative taken or project led
-	\resumeItemListEnd
-	
-	\resumeProject
-	{Leadership Role B}
-	{Organization/Institution Name}
-	{Month Year - Month Year}
-	{{}[\href{https://organization-b-link.com}{\textcolor{darkblue}{\faIcon{globe}}}]}
-	\resumeItemListStart
-	\item Key responsibility or achievement in this role
-	\item Quantifiable impact or improvement made during tenure
-	\item Initiative taken or project led
-	\resumeItemListEnd
-	
-	\resumeSubHeadingListEnd
-	\vspace{-6mm}
-	\end{comment}
-
 	\section{\textbf{Volunteer Experience}}
 	\vspace{-0.4mm}
 	\resumeSubHeadingListStart
@@ -557,8 +639,36 @@
 	\vspace{-6mm}
 	\end{comment}
 
+	% Skills Starts
+	\section{\textbf{Skills}}
+	\vspace{1mm}
+	\resumeHeadingSkillStart
+	\resumeSubItem{Programming Languages:}
+	{C/C++, Python, Java, SQL}
+	\resumeSubItem{Data Science \& Machine Learning:}
+	{Pandas, NumPy, Scikit-learn, TensorFlow, Keras, Matplotlib, Seaborn}
+	\resumeSubItem{Operating Systems:}
+	{Linux(Debian, Ubuntu, Fedora), Windows}
+	\resumeSubItem{Database Systems:}
+	{MySQL, PostgreSQL, MongoDB, SQLite}
+	\resumeSubItem{DevOps \& Version Control:}
+	{Git, GitHub, CI/CD}
+	\resumeSubItem{Web Technologies:}
+	{HTML, CSS, Bootstrap, JavaScript, React, Node.js}
+	\resumeSubItem{Mathematical \& Statistical Tools:}
+	{MATLAB}
+	\resumeSubItem{Teaching Skills:}
+	{Curriculum Design, Classroom Management, Assessment \& Evaluation, Student Mentoring, Lecture Preparation}
+	\resumeSubItem{Research Skills:}
+	{Experimental Design, Data Analysis, Scientific Writing, Literature Review, Research Methodologies, Grant Writing}
+	\resumeSubItem{Other Tools \& Technologies:}
+	{LaTeX, Jupyter Notebooks, Microsoft Office, Photoshop, Illustrator, Premiere}
+	\resumeHeadingSkillEnd
+	% Skills Ends
+
+	% Additional Info Start
 	\section{\textbf{Additional Information}}
-	\vspace{-0.4mm}
+	\vspace{1mm}
 
 	\small{
     \textbf{Languages:} 
@@ -567,18 +677,8 @@
 		\item \textbf{English:} Fluent in reading, writing, and listening, with average speaking skills. Completed a bachelor's program taught in English and published academic papers in English. My primary, middle, and high school education was primarily in English.
 		\item \textbf{Chinese:} Passed HSK Level 6, the highest language proficiency certification in Chinese.
     \end{itemize}
-
-	\textbf{Research Interests:} 
-	\begin{itemize}[leftmargin=*]
-		\item Artificial Intelligence (AI) and its applications in healthcare, robotics, and automation
-		\item Machine Learning (ML), Deep Learning (DL), and Reinforcement Learning (RL) techniques
-		\item Convolutional Neural Networks (CNNs) and Computer Vision for image recognition and processing
-		\item Natural Language Processing (NLP) and its impact on language models and chatbots
-		\item Algorithm design, optimization, and computational complexity
-		\item Autonomous systems, robotics, and intelligent agents
-	\end{itemize}
-	}
 	\vspace{-4mm}
+	% Additional Info End
 	
 	\section{\textbf{References}}
 	\vspace{-0.2mm}
