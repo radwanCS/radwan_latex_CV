@@ -12,6 +12,10 @@
 \usepackage{CJKutf8}
 \usepackage[table,xcdraw]{xcolor}
 
+% Biblatex
+\usepackage[style=ieee, defernumbers=true, backend=biber]{biblatex}
+\addbibresource{bibliography.bib}
+
 % Template Package imports
 \usepackage{latexsym}
 \usepackage{xcolor}
@@ -163,7 +167,7 @@
 % Custom Commands
 \newcommand{\chinese}[1]{\begin{CJK}{UTF8}{gbsn}#1\end{CJK}} % Normal Chinese Font
 \newcommand{\chinesebf}[1]{{\renewcommand{\bfdefault}{bx}\begin{CJK}{UTF8}{gbsn}\textbf{#1}\end{CJK}}} % Bold Chinese
-
+\renewcommand*{\bibfont}{\normalfont\small}
 
 \title{My Amazing Document}
 \author{John Doe}
@@ -294,8 +298,8 @@
 	\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}X}
 	\textbullet\ Machine Learning and Deep Learning & \textbullet\ Computer Vision \\
 	\textbullet\ Natural Language Processing (NLP) & \textbullet\ Reinforcement Learning (RL) \\
-	\textbullet\ AI Applications in Healthcare & \textbullet\ Medical Big Data\\
-	\textbullet\ Computer Architecture and Software System Design & \textbullet\ Autonomous Systems and Robotics\\
+	\textbullet\ AI Applications in Healthcare & \textbullet\ Autonomous Systems\\
+	\textbullet\ Computer Architecture and Software System Design & \textbullet\ Algorithms and Computer Science Theory\\
 	\end{tabularx}
 	}
 	\endgroup
@@ -397,18 +401,7 @@
 	\section{\textbf{Projects}}
 	\vspace{-0.4mm}
 	\resumeSubHeadingListStart
-	
-	\resumeProject
-	{Deep learning: [Histopathological Image Classification by Using CNN]}
-	{Tools: [Python, TensorFlow, Keras, ResNet-50, Transfer Learning, Fine-Tuning, Macenko Method]}
-	{Sep. 2020 - March 2021}
-	{{}[\href{https://github.com/radwanCS/ResNet_50_enhanced_for_CRC_image_classification}{\textcolor{darkblue}{\faGithub}}]}
-	\resumeItemListStart
-	\item Adapted the ResNet-50 model to classify histopathological colorectal cancer (CRC) images.
-	\item Utilized transfer learning and fine-tuning techniques to achieve state-of-the-art validation accuracy of 97.7\%.
-	\item Preprocessed the datasets by applying color normalization with the Macenko method to enhance consistency.
-	\resumeItemListEnd
-	
+
 	\resumeProject
     {AI Pathologist: [Image Classification Python Applicaion for Lab Doctors]}
     {Tools: [Python, Qt for Python]}
@@ -419,24 +412,58 @@
         \item Designed the software to operate efficiently on both CPU and GPU, without requiring high-end hardware or third-party software dependencies.
         \item Optimized the user interface for simplicity, allowing pathologists and lab doctors to upload, classify, and analyze images efficiently.
     \resumeItemListEnd
-	\resumeSubHeadingListEnd
+
+	\resumeProject
+	{Computer Science \& Technology Self Study Platform}
+	{Tools: [Python, Sphinx, GitHub Pages, reStructuredText, Git, GitHub Actions(CI/CD)]}
+	{May 2021 - Present}
+	{{}[\href{https://radwancs.github.io/Tsinghua-CS-SelfStudy/index.html}{\textcolor{darkblue}{\faGithub}}]}
+	\resumeItemListStart
+	\item Developed a comprehensive self-study guide for Computer Science based on curricula from renowned universities like Tsinghua, MIT, and Harvard.
+	\item Utilized Sphinx and reStructuredText to generate clean, readable documentation, deployed to GitHub Pages using Continuous Deployment with GitHub Actions.
+	\item Created a structured learning roadmap, including suggested books, online resources, courses, and exams, designed to guide learners through the essential topics in computer science.
+	\item Integrated practical resources like the REKCARC-TSC-UHT open-source project on GitHub to enrich the guide with real-world examples and tools.
+	\resumeItemListEnd
+
+	\resumeProject
+	{Data Structure Visualization using Graphviz}
+	{Tools: [C, Graphviz]}
+	{Sep. 2022 - Present}
+	{{}[\href{https://github.com/radwanCS/Data-Structure-Visualization-with-Graphviz}{\textcolor{darkblue}{\faGithub}}]}
+	\resumeItemListStart
+	\item Developed a tool for visualizing data structures like Binary Search Trees (BST) and Threaded Binary Trees using the Graphviz library.
+	\item Provided interactive visualization for tree structures and operations, helping users understand internal relationships.
+	\item Included future support for AVL Trees and Red-Black Trees for extended functionality.
+	\resumeItemListEnd
+
+	\resumeProject
+	{The Oden Project}
+	{Tools: [HTML, CSS, JavaScript, React, Node.js]}
+	{April 2020 - May 2021}
+	{{}[\href{https://github.com/radwanCS?tab=repositories}{\textcolor{darkblue}{\faGithub}}]}
+	\resumeItemListStart
+	\item Gained hands-on experience in front-end and back-end development, utilizing tools such as React and Node.js.
+	\item Developed practical solutions for various common applications, applying modern development practices.
+	\item Completed multiple projects as part of the Oden project process, including: \textbf{Social media site clone, Tic-Tac-Toe Game, Drawing App, Calculator App, Responsive Login Page, Admin Dashboard and Library App}
+
+	\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
 	% Projects Section Ends
 
-	\section{\textbf{Patents and Publications} \hspace*{\fill} \textcolor{darkblue}{\scriptsize C=Conference, J=Journal, P=Patent, S=In Submission, T=Thesis}}
-	\vspace{0.2mm}
-	\small{
-		\begin{enumerate}[leftmargin=*, labelsep=0.5em, align=left, widest={[\textbf{S.1}]}, itemindent=0em, label={\textbf{[\arabic*]}}]
-			
-			\item[\textbf{[C.1]}] Your Name, et al. (Year). \href{https://doi.org/XX.XXXX/XXXXXXX.XXXX.XXXXXXX}{\textbf{Title of Conference Paper}}. In \textit{Name of Conference Proceedings}, pp. XX-XX. Publisher. Date, Location. DOI: XX.XXXX/XXXXXXX.XXXX.XXXXXXX
+	% Publication Section start
+	\section{\textbf{Patents and Publications}}
+	\vspace{1mm}
+		\nocite{*}  % This will include all entries from the .bib file even if not cited in the text
+		% Filter by type
+		\subsection*{Online}
+		\printbibliography[type=online, heading=none]
 
-			\item[\textbf{[S.1]}] Your Name, et al. (Year). \textbf{Title of Submitted Paper}. Manuscript submitted for publication in \textit{Journal Name}.
-			
-			\item[\textbf{[P.1]}] Inventor 1, Your Name, Inventor 3, et al. (Year). \href{https://patentoffice.gov/patent/XXXXXXXXX}{\textbf{Title of Patent}}. Patent Office, Patent No. XXXXXXXXX. Registration Date: Date, Grant Date: Date, Publication Date: Date.
-			
-			\item[\textbf{[J.1]}] Author 1, Your Name, Author 3, et al. (Year). \href{https://doi.org/XX.XXXX/XXXXX.XXXX.XXXXXXX}{\textbf{Title of Journal Article}}. \textit{Journal Name}, Vol. XX, Issue X, pp. XXX-XXX. DOI: XX.XXXX/XXXXX.XXXX.XXXXXXX
-		\end{enumerate}
-	}
-		
+		\subsection*{Thesis}
+		\printbibliography[type=thesis, heading=none]
+	% Publication Section Ends
+
 	% Honors and Awards Starts
 	\section{\textbf{Honors and Awards}}
 	\vspace{-0.4mm}
@@ -556,34 +583,8 @@
 	\resumeItemListStart
     \item Developed and delivered engaging lectures in \emph{Software Engineering, Data Structures \& Algorithms, Introduction to computer science, and Computer Orginization} enhancing student understanding and performance.
 	\resumeItemListEnd
-
 	\vspace{-3mm}
-	\subsection*{\underline{Freelance \& Contract Work}}
-	\vspace{-3mm}
-
-	\resumeSubheading
-	{{Unicom Group [\href{https://www.unicomg.com}{\faIcon{globe}}]}}{Sana'a, Yemen}
-	{Full Stack Developer (Contract)}{June 2023 - July 2023}
-	\resumeItemListStart
-	\item Developed, customized, and maintained web-based applications for business solutions.
-	\resumeItemListEnd
-
-	\resumeSubheading
-	{{Trading Company [\href{https://www.dadaotool.com}{\faIcon{globe}}]}}{Jedah, Saudi Arabia}
-	{Full Stack Developer (Contract)}{August 2022 - Sep. 2022}
-	\resumeItemListStart
-	\item Developed and launched the website for DadaoTool as part of a short-term contract, delivering a functional and responsive site within the timeframe.
-	\resumeItemListEnd
-
-	%\resumeSubheading
-	%{{Prodigy Systems [\href{https://www.prodigy-sys.com/}{\faIcon{globe}}]}}{Sana'a, Yemen}
-	%{AI Engineer}{July 2023 - August 2023}
-	%\resumeItemListStart
-    %\item 
-	%\resumeItemListEnd 
-	
 	\resumeSubHeadingListEnd
-	\vspace{-6mm}
 	% Experience Ends
 
 	\section{\textbf{Volunteer Experience}}
@@ -657,6 +658,8 @@
 	{HTML, CSS, Bootstrap, JavaScript, React, Node.js}
 	\resumeSubItem{Mathematical \& Statistical Tools:}
 	{MATLAB}
+	\resumeSubItem{Software Engineering:}
+	{UML, Object-Oriented Design (OOD), Software Architecture, Design Patterns, Software Development Lifecycle (SDLC)}
 	\resumeSubItem{Teaching Skills:}
 	{Curriculum Design, Classroom Management, Assessment \& Evaluation, Student Mentoring, Lecture Preparation}
 	\resumeSubItem{Research Skills:}
