@@ -14,3 +14,25 @@ Version: 1.0
 Last Updated: 2023-08-12
 License: Creative Commons CC BY 4.0
 );
+
+use File::Copy;
+use Time::Piece;
+
+END {
+    my $source_file = 'main.pdf';
+    my $iso_datetime = localtime->strftime('%Y-%m-%d');
+    my $optional_prefix = 'RadwanCV';
+    my $optional_suffix = '';
+
+    my ($filename, $extension) = $source_file =~ /^(.+)\.(\w+)$/;
+    my @name_parts = ($optional_prefix, $iso_datetime, $optional_suffix);
+    my @filtered_array = grep { defined && /\S/ } @name_parts;
+    my $new_filename = join("_", @filtered_array) . ".$extension";
+
+    if (copy($source_file, $new_filename)) {
+        print "File renamed successfully to: $new_filename\n";
+    } else {
+        print "Failed to rename the file: $!\n";
+    }
+
+}
