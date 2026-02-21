@@ -169,8 +169,8 @@
 \newcommand{\chinesebf}[1]{{\renewcommand{\bfdefault}{bx}\begin{CJK}{UTF8}{gbsn}\textbf{#1}\end{CJK}}} % Bold Chinese
 \renewcommand*{\bibfont}{\normalfont\small}
 
-\title{My Amazing Document}
-\author{John Doe}
+\title{My Academic CV}
+\author{Radwan Al-Shawesh}
 \date{\today}  % Adds the current date
 
 \begin{document}
@@ -211,29 +211,10 @@
 
 	\vspace{1mm}
 	\small{
-		A passionate computer science enthusiast with a strong foundation in mathematics, computer science, software engineering, and 
-		artificial intelligence. Driven by curiosity and a strong passion for research, I am constantly exploring new ways to innovate 
-		and push the boundaries of what technology can achieve. If you're looking for someone who gets excited about breakthroughs in computer science, 
-		embracing new challenges, and turning coffee into code, then we’re on the same page!
+	Computer science instructor with a strong foundation in mathematics, software engineering, and artificial intelligence. Research interests include software engineering methodologies, formal modeling, and the mathematical foundations of computing, with a growing focus on intelligent systems. Currently preparing for PhD studies, aiming to pursue rigorous, theory-driven research with practical impact.
 	}
 	\vspace{-2mm}
 	% Summary End
-	
-	% Personal Info Start
-	\section{\textbf{Personal Information}}
-	\vspace{2mm}
-	
-	\footnotesize{
-	\centering
-	\begin{tabularx}{\textwidth}{X@{\hskip 10pt}l@{\hskip 20pt}X@{\hskip 10pt}X}
-		\textbf{Name}           & Redhwan Abdullah Thabit Al-Shawesh   & \textbf{Marital Status} & Married \\
-		\textbf{Nationality}    & Yemeni                               & \textbf{Place of Birth} & Sana'a, Yemen \\
-		\textbf{Gender}         & Male                                 & \textbf{Languages}      & Arabic, English, Chinese \\
-		\textbf{Date of Birth}  & 12 October 1992                      & \textbf{Profession}     & Lecturer \\
-	\end{tabularx}
-	}
-	\vspace{-4mm}
-	% Personal Info End
 
 	% Education Start
 	\section{\textbf{Education}}
@@ -251,6 +232,7 @@
 	\item \textbf{Relevant Coursework:} Computer Architecture, Algorithm Design and Complexity Analysis, Fundamentals of Artificial Intelligence, Data Visualization, Theoretical Foundation of Software, Software/Hardware Co-Design, Machine learning, Large-Scale Nonlinear Programming, Advanced Design Methodologies for Smart Systems, Seminar on Embedded Systems.
 	\resumeItemListEnd
 	
+	\begin{comment}
 	\resumeSubheading
 	{South East University [\href{https://1drv.ms/b/c/0b66680558f854cf/EZ6IBz28Vu1HkfYbkDgmtUUBh_bQMBNlrJH0y5fedP4pCg?e=dXOP9c}{\faIcon{globe}}]}{Nanjing, China}
 	{\textbf{MTCSOL} Master of Teaching Chinese to Speakers of Other Languages }{Sep. 2016 - July 2018}
@@ -260,6 +242,7 @@
 	\item \textbf{GPA:} 4.50/5.00
 	\item \textbf{Awards:} CSC Scholarship Type A
 	\resumeItemListEnd
+	\end{comment}
 
 	\resumeSubheading
 	{Nanjing University of Aeronautics \& Astronautics [\href{https://1drv.ms/b/c/0b66680558f854cf/EWNwcEpNXSxDgGY2XtRoH8ABN-HndmwzFW5RBjuSeB4H-A?e=4fZaLe}{\faIcon{globe}}]}{Nanjing, China}
@@ -271,6 +254,7 @@
 	\item \textbf{Relevant Coursework:} Linear Algebra, Algebra \& Trigonometry, Introduction to Computer Science, Computer Programming, Calculus 1,2 \& 3, Electrical Engineering \& Electronic Technique 1 \& 2, Physics 1 \& 2, Information Retrieval \& Utilization, Numerical Analysis, Discreet Mathmatics, Mathematical Equations, Software Engineering.
 	\resumeItemListEnd
 	
+	\begin{comment}
 	\resumeSubheading
 	{Tongji University [\href{https://1drv.ms/b/c/0b66680558f854cf/EYA7wC5Ad_FPjbqRLHAKbsUBUG4ZOGk8byilERusmPVQaQ?e=0xjWBs}{\faIcon{globe}}]}{Shanghai, China}
 	{Preparatory Certificate in Science and Engineering}{Sep. 2011 - July 2012}
@@ -280,7 +264,8 @@
 	\item \textbf{Awards:} CSC Scholarship Type A, Outstanding Academic Achievement Award, Excellent Attendance Award, and Active Participation in Various Activities Award.
 	\item \textbf{Relevant Coursework:} Computer Science, Mathmatics, Physics, Scientific Chinese, Chemistry.
 	\resumeItemListEnd
-	
+	\end{comment}
+
 	\resumeSubHeadingListEnd
 	\vspace{-6mm}
 	% Education Ends
@@ -326,6 +311,18 @@
 	\resumeSubHeadingListEnd
 	\vspace{-6mm}
 	% Research Experience End
+
+	% Publication Section start
+	\section{\textbf{Patents and Publications}}
+	\vspace{1mm}
+		\nocite{*}  % This will include all entries from the .bib file even if not cited in the text
+		% Filter by type
+		\subsection*{Online}
+		\printbibliography[type=online, heading=none]
+
+		\subsection*{Thesis}
+		\printbibliography[type=thesis, heading=none]
+	% Publication Section Ends
 
 	% Teaching Experience Starts
 	\section{\textbf{Teaching Experience}}
@@ -422,6 +419,7 @@
 	\item Included future support for AVL Trees and Red-Black Trees for extended functionality.
 	\resumeItemListEnd
 
+	\begin{comment}
 	\resumeProject
 	{The Oden Project}
 	{Tools: [HTML, CSS, JavaScript, React, Node.js]}
@@ -430,83 +428,17 @@
 	\resumeItemListStart
 	\item Gained hands-on experience in front-end and back-end development, utilizing tools such as React and Node.js.
 	\item Developed practical solutions for various common applications, applying modern development practices.
-	\item Completed multiple projects as part of the Oden project process, including: \textbf{Social media site clone, Tic-Tac-Toe Game, Drawing App, Calculator App, Responsive Login Page, Admin Dashboard and Library App}
-
+	\item Completed multiple projects as part of the Oden project process, including: \textbf{Social media site clone, Tic-Tac-Toe Game, Drawing App, Calculator App, Responsive Login Page, Admin Dashboard and Library App}	
 	\resumeItemListEnd
+	\end{comment}
 
 \resumeSubHeadingListEnd
 
 	% Projects Section Ends
 
-	% Publication Section start
-	\section{\textbf{Patents and Publications}}
-	\vspace{1mm}
-		\nocite{*}  % This will include all entries from the .bib file even if not cited in the text
-		% Filter by type
-		\subsection*{Online}
-		\printbibliography[type=online, heading=none]
 
-		\subsection*{Thesis}
-		\printbibliography[type=thesis, heading=none]
-	% Publication Section Ends
 
-	% Honors and Awards Starts
-	\section{\textbf{Honors and Awards}}
-	\vspace{-0.4mm}
-	\resumeSubHeadingListStart
-		
-	\resumeProject
-	{Shanghai Goverment Scholarship Type A}
-	{East China Normal University}
-	{Sep. 2018}
-	{{}[\href{https://www.study-shanghai.cn/c.asp?action=AS_SS_Entry}{\textcolor{darkblue}{\faIcon{globe}}}]}
-	\resumeItemListStart
-		\item Awarded this scholarship to pursue a Master’s degree in Software Engineering.
-		\item Successfully completed a three year master degree at ECNU.
-	\resumeItemListEnd
-	
-	\resumeProject
-		{China Goverment Scholarship Type A}
-		{Embassy of China in Yemen}
-		{Sep. 2011}
-		{{}[\href{https://www.csc.edu.cn/studyinchina/}{\textcolor{darkblue}{\faIcon{globe}}}]}
-	\resumeItemListStart
-		\item Awarded this scholarship to pursue a bachelor degree.
-		\item Successfully completed a one-year preparatory course at Tongji University.
-		\item Successfully completed a four-year bachelor's degree at NUAA.
-	\resumeItemListEnd
-		
-	\resumeProject
-		{China Goverment Scholarship Type A}
-		{Embassy of China in Yemen}
-		{Sep. 2016}
-		{{}[\href{https://www.csc.edu.cn/studyinchina/}{\textcolor{darkblue}{\faIcon{globe}}}]}
-	\resumeItemListStart
-		\item Awarded this scholarship to pursue a Master's degree in Chinese Language.
-		\item Successfully completed a three-year master degree at SEU.
-	\resumeItemListEnd
-	
-	\resumeProject
-		{Top 100 Students Award}
-		{Nanjing University of Aeronautical \& Astronautical Engineering}
-		{Sep. 2015}
-		{{}[\href{https://1drv.ms/b/c/0b66680558f854cf/EZs7uU2FlwhBtqCXhEjKeBwBNxDvedaqIt2Cz2pGCuhbpQ?e=u5CROZ}{\textcolor{darkblue}{\faIcon{globe}}}]}
-	\resumeItemListStart
-		\item This award was given for excellence in academic performance, recognizing me as one of the top 100 students in the university during the 2015-2016 academic year.
-	\resumeItemListEnd
-	
-	\resumeProject
-		{Certificate of Honor}
-		{Tongji University}
-		{June 2012}
-		{{}[\href{https://1drv.ms/b/c/0b66680558f854cf/EdAygWujlQVKuntlVSHtJRIBFWMyYy7UMJXhswPmx3oSWQ?e=Y1Aupf}{\textcolor{darkblue}{\faIcon{globe}}}]}
-	\resumeItemListStart
-		\item Won the Outstanding Academic Achievement Award, Excellent Attendance Award, and Active Participation in Various Activities Award.
-	\resumeItemListEnd
-	
-	\resumeSubHeadingListEnd
 	\vspace{-6mm}
-	% Honors and Awards End
 
 	\begin{comment}
 	\section{\textbf{Leadership Experience}}
@@ -626,6 +558,65 @@
 	\vspace{-6mm}
 	\end{comment}
 
+	% Honors and Awards Starts
+	\section{\textbf{Honors and Awards}}
+	\vspace{-0.4mm}
+	\resumeSubHeadingListStart
+		
+	\resumeProject
+	{Shanghai Goverment Scholarship Type A}
+	{East China Normal University}
+	{Sep. 2018}
+	{{}[\href{https://www.study-shanghai.cn/c.asp?action=AS_SS_Entry}{\textcolor{darkblue}{\faIcon{globe}}}]}
+	\resumeItemListStart
+		\item Awarded this scholarship to pursue a Master’s degree in Software Engineering.
+		\item Successfully completed a three year master degree at ECNU.
+	\resumeItemListEnd
+	
+	\resumeProject
+		{China Goverment Scholarship Type A}
+		{Embassy of China in Yemen}
+		{Sep. 2011}
+		{{}[\href{https://www.csc.edu.cn/studyinchina/}{\textcolor{darkblue}{\faIcon{globe}}}]}
+	\resumeItemListStart
+		\item Awarded this scholarship to pursue a bachelor degree.
+		\item Successfully completed a one-year preparatory course at Tongji University.
+		\item Successfully completed a four-year bachelor's degree at NUAA.
+	\resumeItemListEnd
+
+	\begin{comment}
+	\resumeProject
+		{China Goverment Scholarship Type A}
+		{Embassy of China in Yemen}
+		{Sep. 2016}
+		{{}[\href{https://www.csc.edu.cn/studyinchina/}{\textcolor{darkblue}{\faIcon{globe}}}]}
+	\resumeItemListStart
+		\item Awarded this scholarship to pursue a Master's degree in Chinese Language.
+		\item Successfully completed a three-year master degree at SEU.
+	\resumeItemListEnd
+	\end{comment}
+	
+	\resumeProject
+		{Top 100 Students Award}
+		{Nanjing University of Aeronautical \& Astronautical Engineering}
+		{Sep. 2015}
+		{{}[\href{https://1drv.ms/b/c/0b66680558f854cf/EZs7uU2FlwhBtqCXhEjKeBwBNxDvedaqIt2Cz2pGCuhbpQ?e=u5CROZ}{\textcolor{darkblue}{\faIcon{globe}}}]}
+	\resumeItemListStart
+		\item This award was given for excellence in academic performance, recognizing me as one of the top 100 students in the university during the 2015-2016 academic year.
+	\resumeItemListEnd
+	
+	\resumeProject
+		{Certificate of Honor}
+		{Tongji University}
+		{June 2012}
+		{{}[\href{https://1drv.ms/b/c/0b66680558f854cf/EdAygWujlQVKuntlVSHtJRIBFWMyYy7UMJXhswPmx3oSWQ?e=Y1Aupf}{\textcolor{darkblue}{\faIcon{globe}}}]}
+	\resumeItemListStart
+		\item Won the Outstanding Academic Achievement Award, Excellent Attendance Award, and Active Participation in Various Activities Award.
+	\resumeItemListEnd
+	
+	\resumeSubHeadingListEnd
+	% Honors and Awards End
+
 	% Skills Starts
 	\section{\textbf{Skills}}
 	\vspace{1mm}
@@ -664,7 +655,7 @@
     \begin{itemize}[leftmargin=*]
         \item \textbf{Arabic:} Native speaker.
 		\item \textbf{English:} Fluent in reading, writing, and listening, with average speaking skills. Completed a bachelor's program taught in English and published academic papers in English. My primary, middle, and high school education was primarily in English.
-		\item \textbf{Chinese:} Passed HSK Level 6, the highest language proficiency certification in Chinese.
+		\item \textbf{Chinese:} HSK Level 6 (highest proficiency level).
     \end{itemize}
 	\vspace{-4mm}
 	% Additional Info End
